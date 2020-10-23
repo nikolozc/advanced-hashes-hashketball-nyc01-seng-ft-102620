@@ -178,5 +178,13 @@ def team_names
 end 
 
 def player_numbers(name)
+  numbers = []
+  if(name == "Brooklyn Nets")
+    counter = 0 
+    while(counter < game_hash[:home][:players].size) do 
+      return game_hash[:home][:players][counter][:shoe]
+      counter+=1
+    end 
   
+  end 
 end 
