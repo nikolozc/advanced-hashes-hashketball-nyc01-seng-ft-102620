@@ -194,3 +194,5 @@ def player_numbers(name)
   end 
   return numbers
 end 
+
+def 
