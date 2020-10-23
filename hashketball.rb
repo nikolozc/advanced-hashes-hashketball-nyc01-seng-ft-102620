@@ -226,7 +226,7 @@ def big_shoe_rebounds
   while(counter < game_hash[:home][:players].size) do 
     if(game_hash[:home][:players][counter][:shoe] > max)
       max = game_hash[:home][:players][counter][:shoe]
-      retVal = game_hash[:away][:players][counter][:rebounds]
+      retVal = game_hash[:home][:players][counter][:rebounds]
     end 
     counter+=1
   end 
