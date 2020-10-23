@@ -176,3 +176,7 @@ def team_names
   teams<<(game_hash[:away][:team_name])
   return teams
 end 
+
+def player_numbers(name)
+  
+end 
