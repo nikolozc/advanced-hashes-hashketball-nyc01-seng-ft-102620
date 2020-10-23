@@ -129,13 +129,18 @@ end
 
 # Write code here
 def num_points_scored (name)
-  index = game_hash[:home][:players].index()
-  binding.pry
-  if(index == nil)
-    index = game_hash[:away][:players].index(name)
-    binding.pry
-  else
-    return game_hash[:home][:players][index][:points]
-  end
-  return game_hash[:away][:players][index][:points]
+  counter = 0 
+  while(counter < game_hash[:away][:players].size) do 
+    if(game_hash[:away][:players][counter][:player_name] == name)
+      return game_hash[:away][:players][counter][:points]
+    end 
+    counter+=1
+  end 
+  counter = 0 
+  while(counter < game_hash[:home][:players].size) do 
+    if(game_hash[:home][:players][counter][:player_name] == name)
+      return game_hash[:home][:players][counter][:points]
+    end 
+    counter+=1
+  end 
 end
