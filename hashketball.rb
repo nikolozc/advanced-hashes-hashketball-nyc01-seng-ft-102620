@@ -186,5 +186,11 @@ def player_numbers(name)
       counter+=1
     end 
   else
+    counter = 0 
+    while(counter < game_hash[:away][:players].size) do 
+      numbers<<(game_hash[:away][:players][counter][:number])
+      counter+=1
+    end 
   end 
+  return numbers
 end 
