@@ -129,10 +129,10 @@ end
 
 # Write code here
 def num_points_scored (name)
-  index = game_hash[:home][:players].index(name)
+  index = game_hash[:home][:players].index()
   binding.pry
   if(index == nil)
-    index = game_hash[:away][:players].index()
+    index = game_hash[:away][:players].index(name)
     binding.pry
   else
     return game_hash[:home][:players][index][:points]
