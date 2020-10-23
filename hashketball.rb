@@ -195,4 +195,19 @@ def player_numbers(name)
   return numbers
 end 
 
-def 
+def player_stats(name)
+  counter = 0 
+  while(counter < game_hash[:away][:players].size) do 
+    if(game_hash[:away][:players][counter][:player_name] == name)
+      return game_hash[:away][:players][counter]
+    end 
+    counter+=1
+  end 
+  counter = 0 
+  while(counter < game_hash[:home][:players].size) do 
+    if(game_hash[:home][:players][counter][:player_name] == name)
+      return game_hash[:home][:players][counter]
+    end 
+    counter+=1
+  end 
+end 
