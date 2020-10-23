@@ -134,5 +134,6 @@ def num_points_scored (name)
     index = game_hash[:away][:players].index(name)
   else
     return game_hash[:home][:players][index][:points]
-  
+  end
+  return game_hash[:away][:players][index][:points]
 end
